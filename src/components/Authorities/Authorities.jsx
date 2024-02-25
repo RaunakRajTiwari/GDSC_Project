@@ -1,27 +1,20 @@
-import Header from "../Header/Header"
-import Footer from "../Footer/Footer"
 import Card from "../Card/Card"
+import data from "../../assets/data/data.jsx"
 
 export default function Authorities() {
     return (
         <>
+            { data.map((d) =>
             <Card
-            image="https://picsum.photos/200/300"
-            quantity="10 Plates"
-            quality="Good"
-            address="NIT Patna Mess"
-            time = "1 hour"
+            image={d["img_src"]}
+            quantity={d["quantity"]}
+            quality={d["quality"]}
+            address={d["address"]}
+            time = {d["time"]}
 
             />
-            <Card
-            image="https://picsum.photos/200/300"
-            quantity="15 Plates"
-            quality="Average"
-            address="NIT Patna Mess"
-            time = "2 hours"
-
-            />
-
+            )
+            }
         </>
     )
 }
